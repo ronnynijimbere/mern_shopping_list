@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "client-install": "npm install --prefix client",
+    "test": "set NODE_ENV=test || SET \"NODE_ENV=test\" && mocha test/**/*.test.js",
+    "test-watch": "nodemon --exec \"npm test\"",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
@@ -22,6 +24,9 @@
     "mongoose": "5.7.1"
   },
   "devDependencies": {
-    "nodemon": "1.19.3"
+    "expect": "26.4.2",
+    "mocha": "8.1.1",
+    "nodemon": "1.19.3",
+    "supertest": "4.0.2"
   }
 }
